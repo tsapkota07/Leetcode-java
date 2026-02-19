@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9ec1af3-314f-4f99-95ba-6dd32b83209c" name="Changes" comment="Initial LeetCode project structure">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problems/p0001_0100/p0001_two_sum/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/problems/p0001_0100/p0001_two_sum/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problems/p0001_0100/p0001_two_sum/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/problems/p0001_0100/p0001_two_sum/Solution.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +62,7 @@
     "onboarding.tips.debug.path": "/Users/tirsansapkota/Leetcode/src/main/java/com/tirsansapkota/Main.java",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "build.tools",
     "vue.rearranger.settings.migration": "true"
   }
@@ -108,6 +110,8 @@
       <updated>1770873100943</updated>
       <workItem from="1770873101939" duration="3700000" />
       <workItem from="1771303900194" duration="4793000" />
+      <workItem from="1771477064647" duration="47000" />
+      <workItem from="1771477642092" duration="703000" />
     </task>
     <task id="LOCAL-00001" summary="Initial LeetCode project structure">
       <option name="closed" value="true" />
