@@ -1,0 +1,213 @@
+🔵 PHASE 1 — Arrays & Hashing (Foundation)
+
+Patterns:
+	•	HashMap
+	•	HashSet
+	•	Frequency counting
+	•	Two pointers
+	•	Prefix sum
+
+Problems (in order)
+	1.	Two Sum
+	2.	Contains Duplicate
+	3.	Valid Anagram
+	4.	Intersection of Two Arrays
+	5.	Top K Frequent Elements
+	6.	Product of Array Except Self
+	7.	Longest Consecutive Sequence
+	8.	Subarray Sum Equals K
+	9.	Two Sum II (sorted array)
+	10.	3Sum
+
+👉 Stay here until mediums feel comfortable.
+
+⸻
+
+🔵 PHASE 2 — Two Pointers & Sliding Window
+
+Patterns:
+	•	Expanding/contracting window
+	•	Fast/slow pointers
+	•	Window validity tracking
+
+Problems
+	1.	Valid Palindrome
+	2.	Remove Duplicates from Sorted Array
+	3.	Container With Most Water
+	4.	Longest Substring Without Repeating Characters
+	5.	Longest Repeating Character Replacement
+	6.	Minimum Window Substring
+	7.	Find All Anagrams in a String
+	8.	Permutation in String
+
+⸻
+
+🔵 PHASE 3 — Stack & Monotonic Stack
+
+Patterns:
+	•	LIFO logic
+	•	Monotonic increasing/decreasing stack
+	•	Next greater element
+
+Problems
+	1.	Valid Parentheses
+	2.	Min Stack
+	3.	Daily Temperatures
+	4.	Next Greater Element I
+	5.	Largest Rectangle in Histogram
+	6.	Car Fleet
+
+⸻
+
+🔵 PHASE 4 — Linked List
+
+Patterns:
+	•	Pointer manipulation
+	•	Fast/slow
+	•	Reversal
+	•	Merge technique
+
+Problems
+	1.	Reverse Linked List
+	2.	Merge Two Sorted Lists
+	3.	Linked List Cycle
+	4.	Remove Nth Node From End
+	5.	Reorder List
+	6.	Add Two Numbers
+
+⸻
+
+🔵 PHASE 5 — Binary Search
+
+Patterns:
+	•	Classic binary search
+	•	Lower/upper bound
+	•	Binary search on answer
+
+Problems
+	1.	Binary Search
+	2.	Search Insert Position
+	3.	Search in Rotated Sorted Array
+	4.	Find Minimum in Rotated Sorted Array
+	5.	Koko Eating Bananas
+	6.	Median of Two Sorted Arrays (advanced)
+
+⸻
+
+🔵 PHASE 6 — Trees (Major Milestone)
+
+Patterns:
+	•	DFS (recursive + iterative)
+	•	BFS (level order)
+	•	Height/diameter
+	•	Balanced tree
+	•	LCA
+
+Problems
+	1.	Maximum Depth of Binary Tree
+	2.	Same Tree
+	3.	Invert Binary Tree
+	4.	Binary Tree Level Order Traversal
+	5.	Diameter of Binary Tree
+	6.	Balanced Binary Tree
+	7.	Lowest Common Ancestor
+	8.	Serialize and Deserialize Binary Tree
+
+Spend real time here.
+
+⸻
+
+🔵 PHASE 7 — Heap / Priority Queue
+
+Patterns:
+	•	Min heap
+	•	Max heap
+	•	Top K
+	•	Merge structures
+
+Problems
+	1.	Kth Largest Element
+	2.	Top K Frequent Elements
+	3.	Find Median from Data Stream
+	4.	Merge K Sorted Lists
+	5.	Task Scheduler
+
+⸻
+
+🔵 PHASE 8 — Graphs
+
+Patterns:
+	•	BFS
+	•	DFS
+	•	Cycle detection
+	•	Topological sort
+	•	Union Find
+	•	Dijkstra
+
+Problems
+	1.	Number of Islands
+	2.	Clone Graph
+	3.	Course Schedule
+	4.	Pacific Atlantic Water Flow
+	5.	Graph Valid Tree
+	6.	Redundant Connection
+	7.	Network Delay Time
+
+⸻
+
+🔵 PHASE 9 — Backtracking
+
+Patterns:
+	•	Decision tree exploration
+	•	State undoing
+
+Problems
+	1.	Subsets
+	2.	Subsets II
+	3.	Permutations
+	4.	Combination Sum
+	5.	Word Search
+	6.	N-Queens
+
+⸻
+
+🔵 PHASE 10 — Dynamic Programming
+
+Start Simple
+
+1D DP
+	1.	Climbing Stairs
+	2.	House Robber
+	3.	Maximum Subarray
+	4.	Coin Change
+
+2D DP
+	5.	Unique Paths
+	6.	Longest Common Subsequence
+	7.	Edit Distance
+
+Advanced
+	8.	Longest Increasing Subsequence
+	9.	Partition Equal Subset Sum
+
+⸻
+
+How To Use This List
+
+For each phase:
+	•	Solve 2–3 per day
+	•	Re-solve after 3 days
+	•	Re-solve after 1 week
+	•	Write pattern summary in Notes.md
+
+Do NOT move forward until:
+	•	You can solve at least 70% of that phase without hints.
+
+⸻
+
+Expected Timeline (Realistic)
+	•	Phases 1–3 → 2 months
+	•	Phases 4–6 → 2–3 months
+	•	Phases 7–10 → 3+ months
+
+Total mastery path: 6–8 months.

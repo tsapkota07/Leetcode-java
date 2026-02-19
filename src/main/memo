@@ -1,0 +1,39 @@
+
+
+Add LC 0001 Two Sum
+Add LC 0142 Linked List Cycle II
+Refactor LC 0238 to O(1) space
+
+
+Step 1 — Concept Review (15 min)
+
+Re-read notes or watch short explanation.
+
+Step 2 — 1–2 Problems (Deep Solve)
+	•	Try 30–45 minutes without looking.
+	•	Think on paper.
+	•	If stuck, take hint only.
+
+Step 3 — Post-Mortem (Most Important)
+
+In your Notes.md write:
+	•	Pattern used
+	•	Why brute force fails
+	•	Time complexity
+	•	Space complexity
+	•	What trick made it work
+
+
+For each problem:
+Solution.java
+Notes.md
+Complexity.txt
+
+Inside of notes, somthing like:
+Pattern: Sliding Window
+Core Idea: Maintain window of valid substring
+Why brute force fails: O(n^2)
+Optimization: Move left pointer only when invalid
+Time: O(n)
+Space: O(1)
+Mistake I made: Forgot to shrink window when condition broke
