@@ -1,0 +1,35 @@
+An algorithm is a step by step procedure that basically transforms
+input into output in a finite amount of time.
+
+While doing a problem, especially leetcode, I need to mentally
+define these things:
+- Input
+- Output
+- Preconditions -> Assumed true before execution
+- Postcondition -> Must be true after execution.
+
+To count the running time of an algorithm, think of each primitive operation as a contant amount of time.
+Primitive operation includes but isn't limited to:
+- Value assign
+- method call
+- arithmetic operations, comparison operations
+- indexing into array
+- following object reference
+- returning from a method.
+
+But, if we were to count each of them, it'd be too much and it's not realistic. That is why, we count
+the dominant operations. That's also when Big O comes into place.
+
+Big-O Notation
+Just remember f(n) is Og(n) if f(n) <= c.g(n) for a large n.
+But in practise, drop constants and lower order terms.
+Eg: y = 3n^3 + 4n^2 + 5n +6. Take the most significant portion of this function, which is 3n^3
+Now consider that as f(n). 3n^3 is O(n^3). It's that simple.
+
+Big-O growth Hierarchy (Less to more)
+- log n
+- n
+- n logn
+- n^2
+- n^3 ...
+- 2^n.

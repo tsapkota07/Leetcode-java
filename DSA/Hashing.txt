@@ -1,0 +1,7 @@
+Hashing is scary but it's just a table of keys and values.
+Technically,in an OS it maps keys to some value but thinking of a table
+is fine for practicality.
+
+A hash table stores (key, value) pairs so that we can insert, find,
+or delete by key in expected O(1) time. Worst case is still O(n)
+but

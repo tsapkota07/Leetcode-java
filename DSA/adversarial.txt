@@ -1,0 +1,27 @@
+A problem is something that requires a solution. An algorithm, is then, a specific solution to a problem.
+A problem, then can have many different solutions, and hence, many different algorithms.
+
+The lower bound of an algorithm, is the minimum amount of work any algorithm must do in order to solve
+a problem. If, an algorithm does less than the lower bound, then it must be incorrect. This is the core
+foundation of adversarial arguments.
+
+An adversary is basically a concept that will make us work the hardest so that anything they throw
+at us, we will be able to handle, from simplest attacks to edge cases. An adversary
+- chooses inputs strategically
+- Reveals minimal information
+- forces any algorithm to work hard.
+No matter what kind of data an adversary throws at an algorithm, the logic shouldn't waver. Basically, its
+a way to check if our algorithm can handle all the conditions or not. Eg: for finding the largest number
+among a group of numbers, an algorithm must perform at least n-1 comparisons. This is an example of lower
+bound.
+
+Now, onto expected vs worst case. In other words, realistic vs worst case.
+Worst case
+- deterministic gurantee. Meaning, adversary will do its best to give u trouble. Eg: all the inputs
+    linked to the same hash in a hash table.
+- adversary forces the worst case
+Expected
+- In real life, it is extremelyyy unlikely that all inputs are linked to the same hash in a hash table.
+- No adversary control so we get randomness. In a sense, inputs are distributed uniformly.
+
+Adversarial arguments -> worst case Tool    || Expected analysis -> probabilistic tool.

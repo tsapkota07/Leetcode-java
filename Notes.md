@@ -1,3 +1,8 @@
+Note: Before the start of your session, type source scripts/aliases.sh to 
+
+<br> Usage: lc [problem_no] . Eg: lc 1
+<br> 	 lc 1 open (cd into the folder)
+<br> 	 lc 1 list (show matches)
 
 ### Use lines such as these to commit for clarity and systematic git history.
 >* Add LC 0001 Two Sum
@@ -5,12 +10,14 @@
 >* Refactor LC 0238 to O(1) space
 
 ### Step 1 — Concept Review (15 min)
->* Re-read notes or watch short explanation.
+>* Re-read notes
+>* Watch short explainations
 
-### Step 2 — 1–2 Problems (Deep Solve)
->* Try 30–45 minutes without looking.
->* Think on paper.
->* f stuck, take hint only.
+### Step 2 — (Deep Solve)
+>* Write down Input, Output, Preconditions, Postconditions. 
+>* Try 30–45 minutes without looking at anything. 
+>* Think on paper. Don't hesitate to write down stuff
+>* if stuck, take hint only.
 
 ### Step 3 — Post-Mortem (Most Important)
 In your Notes.md write:
@@ -29,7 +36,7 @@ In your Notes.md write:
 ***
 
 ## Copy paste this: 
-
+```angular2html
 pxxxxProblemName
 
 ###  Pattern:
@@ -45,6 +52,7 @@ pxxxxProblemName
 ### Mistakes:
 
 ### Signal (how to recognize this pattern next time):
+```
 
 ***
 
