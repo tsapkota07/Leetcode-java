@@ -14,7 +14,6 @@ lc() {
   local n
   n=$(printf "%04d" "$1")
 
-  # Find Runner.java inside the problem folder pNNNN_*
   local runner
   runner=$(find problems -type f -name "Runner.java" -path "*/p${n}_*/*" -print -quit 2>/dev/null)
 
@@ -26,14 +25,14 @@ lc() {
   local dir
   dir=$(dirname "$runner")
 
-  if [ "$2" = "list" ]; then
-    find problems -type f -name "Runner.java" -path "*/p${n}_*/*" 2>/dev/null | xargs -I{} dirname "{}"
-    return 0
-  fi
-
   if [ "$2" = "open" ]; then
     cd "$dir" || return 1
     pwd
+    return 0
+  fi
+
+  if [ "$2" = "list" ]; then
+    find problems -type f -name "Runner.java" -path "*/p${n}_*/*" 2>/dev/null | xargs -I{} dirname "{}"
     return 0
   fi
 
@@ -48,8 +47,12 @@ lc() {
 
   javac -d out "${files[@]}" || return 1
 
+  # Read package from Runner.java (if present)
   local pkg
-  pkg=$(echo "$dir" | sed 's#^problems/##' | sed 's#/#.#g')
-
-  java -cp out "${pkg}.Runner"
+pkg=$(awk '/^package[[:space:]]+/ { gsub(/package[[:space:]]+/, "", $0); gsub(/;/, "", $0); print; exit }' "$runner")
+  if [ -z "$pkg" ]; then
+    java -cp out Runner
+  else
+    java -cp out "${pkg}.Runner"
+  fi
 }
