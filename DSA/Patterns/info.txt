@@ -1,0 +1,54 @@
+-------------------------------------------------------------------------------------------------
+--- Arrays ---
+Arrays are the default data structure whether it be list of number, co-ordinates, characters or
+even objects.
+Arrays give constant time access by index. Meaning if we want the 3rd index in a array it's O(1).
+Insertion and deletion is O(n). Append is O(n).
+Arrays are useful to:
+- traverse a structure in order.
+- Access specific indices.
+- Compare elements from both ends
+- Sliding window, prefix sum, etc.
+
+--- Strings ---
+They are just arrays of characters with a few catches.
+In most languages, strings are immutable. Meaning, if we change a string even slightly, then we're not
+really modifying the original but creating an entirely new one under the hood. This has large implications
+for code efficiency. Asides from this string work almost the same as array.
+Strings have questions such as:
+- find longest substring without repeating characters
+- Checking if two strings are anagrams.
+- return all substrings that match a pattern.
+
+--- Set ---
+{1, 2, 3, 4, 5}. Set is just a collection of unique values. No duplicates and no particular order.
+They're often used for tracking whether something exists.
+Set are used, instead of link for :
+- Uniqueness
+- Existence
+- Fast membership checks
+- Sliding windo
+
+--- Control Flow & Looping
+- for i in range(n)
+- for val in arr
+- while start < end
+- if, else, elif
+- break, continue
+
+-------------------------------------------------------------------------------------------------
+Big O Notation
+- O(1)
+Eg: Accessng a specific index in an array.
+- O(log n)     - logarithmic
+- O(n)          - linear time
+- O(nlogn)      -
+- O(n^2)
+
+-------------------------------------------------------------------------------------------------
+--- Hash Maps ---
+At the most basic level, a hash map is the way to store data using a key to find a value. it is a key-value
+pair system.
+Lookup & Insert is O(1) on average.
+We use the hash function in hashing.
+
