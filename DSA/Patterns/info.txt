@@ -16,7 +16,7 @@ In most languages, strings are immutable. Meaning, if we change a string even sl
 really modifying the original but creating an entirely new one under the hood. This has large implications
 for code efficiency. Asides from this string work almost the same as array.
 Strings have questions such as:
-- find longest substring without repeating characters
+- find the longest substring without repeating characters
 - Checking if two strings are anagrams.
 - return all substrings that match a pattern.
 
@@ -27,7 +27,7 @@ Set are used, instead of link for :
 - Uniqueness
 - Existence
 - Fast membership checks
-- Sliding windo
+- Sliding window
 
 --- Control Flow & Looping
 - for i in range(n)
@@ -39,10 +39,10 @@ Set are used, instead of link for :
 -------------------------------------------------------------------------------------------------
 Big O Notation
 - O(1)
-Eg: Accessng a specific index in an array.
+Eg: Accessing a specific index in an array.
 - O(log n)     - logarithmic
 - O(n)          - linear time
-- O(nlogn)      -
+- O(n log n)      -
 - O(n^2)
 
 -------------------------------------------------------------------------------------------------
@@ -51,4 +51,53 @@ At the most basic level, a hash map is the way to store data using a key to find
 pair system.
 Lookup & Insert is O(1) on average.
 We use the hash function in hashing.
+In practise, If two items get the same hash, then it is called as collision.
+Most languages handle this and are still able to get O(1) time on lookup and insert in average.
+Keys must be hashable in a hash map.
+In general, numbers, strings, and tuples are hashable. Lists and dictionary are not.
+For finding a value that already exists, no hash map is O(n), hash map is O(1).
+In Hash maps:
+1) Storing something.
+2) Looking something up.
+3) Updating/ Initializing values.
+An example of this pattern is as follows, also known as a frequency map:
+my_map = {}
+for item in data:
+    if item not in my_map:
+        my_map[item] = 1
+    else:
+        my_map[item] += 1
+IN java, we can use the getOrDefault method in the Map object as a helper for a frequency map.
 
+--------------------------------------------------------------------------------------------------------
+Two pointers
+This is one of the foundational patterns that involves structures like arrays, strings, linked lists, so on.
+At a high level, you just use two pointers/indices to move through a structure.
+There are two major versions of two pointers, in which the pointers move in same vs different directions.
+In the same direction version, you move two pointers from one direction (eg: start to finish) to another with the
+hopes of finding some pattern. Eg, one moves 1 block at a time, another two blocks at a time. If one reaches the middle
+by the time another reaches the end, then we know something about what we're working with.
+In the different direction version, two pointers might be in the first and last index.They're specially
+powerful in sorted arrays to find a specific number,
+Two pointers are useful as they:
+- reduce the number of iterations we need.
+- track a relationship between two places.
+- Avoid extra space.
+Two pointers often come up in these kind of problems:
+- palindromes.
+- reversals
+- merging sorted data
+- "K" sized comparisons
+
+--------------------------------------------------------------------------------------------------------
+Sliding window
+This is an extension of the two pointers you learned above. It is veratile and poopular.
+Instead of tracking just two positions, we are managing an entire range of values. This range is called
+as your window. You don't care about anything before or after it. You're only interested in whats inside
+a window at a given moment, and don't care about anything before or after. You're looking at a subset of data,
+adjusting the window as needed and never revisiting the same element twice.
+Sliding window has two patterns: fixed window, dynamic window.
+Fixed window, find the maximum average of any subarray of size k. return the sum of every k length block, etc.
+Dynamic window, used when the window size is not fixed, and we're trying to find the largest/ smallest/ optimal
+range that satisfies some condition. Eg: find the length of the longest substring with at most K unique characters.
+In these problems, the window grows and shrinks depending on the data.
