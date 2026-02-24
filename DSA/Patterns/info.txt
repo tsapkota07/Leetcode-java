@@ -100,4 +100,16 @@ Sliding window has two patterns: fixed window, dynamic window.
 Fixed window, find the maximum average of any subarray of size k. return the sum of every k length block, etc.
 Dynamic window, used when the window size is not fixed, and we're trying to find the largest/ smallest/ optimal
 range that satisfies some condition. Eg: find the length of the longest substring with at most K unique characters.
-In these problems, the window grows and shrinks depending on the data.
+In these problems, the window grows and shrinks depending on the data. you expand the window to include more elements and once the
+window becomes violated, you start shrinking the window from left until it becomes valid.
+
+--------------------------------------------------------------------------------------------------------
+Binary Search
+It is the most efficient algorithm in a sorted data. Pretty simple. O(log n)
+
+--------------------------------------------------------------------------------------------------------
+Breadth First Search
+You explore the structure level by level. You start at the root, then visit it's child and all it's neighbors.
+At the heart of the BFS is a simple structure Queue. BFS uses Queue
+You use trees as a data structure while keeping track of visited or not flag.
+
