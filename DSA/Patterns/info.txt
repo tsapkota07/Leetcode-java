@@ -109,7 +109,66 @@ It is the most efficient algorithm in a sorted data. Pretty simple. O(log n)
 
 --------------------------------------------------------------------------------------------------------
 Breadth First Search
-You explore the structure level by level. You start at the root, then visit it's child and all it's neighbors.
-At the heart of the BFS is a simple structure Queue. BFS uses Queue
-You use trees as a data structure while keeping track of visited or not flag.
+You explore the structure level by level. You start at the root, visit all it's neighbors(if any)
+then visit it's child and all it's neighbors.
+At the heart of the BFS is a simple structure, Queue. A queue ensures that we always explore nodes in the exact order we discovered them.
+First In First Out. How we apply this differs based on whether we're using a tree or a graph.
 
+Trees are a special type of graphs that don't have cycles. Meaning, you cant loop back to the nodes you already visited.
+We use breadth first search with a tree if we:
+- are traversing a tree from top to bottom
+- care about depth, distance, or levels
+- looking for the first match/closest node to root.
+
+Graphs are more general than trees. They can have cycles, loops, and multiple connections between nodes. Which means that
+we may visit the same node more than once if we're not careful. To prevent this, BFS on a graph must keep a track of visited nodes.
+We use breadth first search with a graph if:
+- working with grids, adjacency lists, or networks.
+- Structure can contain cycles or duplicate paths
+- Need to find the shortest number of steps
+- Exploring possible states
+
+Both versions, for trees and graphs follow the same fundamental structure:
+1. A queue for the current layer of exploration
+2. A loop to process each node
+3. A branching step where the nodes are added to the queue (enqueued).
+
+--------------------------------------------------------------------------------------------------------
+Depth First Search
+You pick a path and follow in as deep as you can. Only when you reach an end in a current path, do you back up and explore other paths.
+
+We use DFS with trees to:
+- flattening trees
+- building or checking structures
+- Searching for nodes based on custom logic.
+
+We use DFS with graphs to:
+- puzzles and state exploration
+- graph coloring
+- recursive traversal
+- backtracking
+The presence of cycles is what separates graphs from trees in DFS logic.
+
+
+--------------------------------------------------------------------------------------------------------
+Backtracking
+This is a recursive problem-solving technique that explores all possible configurations of a solution but efficiently
+backs up when it realizes that a path won't work.
+Spot a backtracking problem
+- generate all combinations of arrangements
+- building up a partial solution
+- want all possible solutions.
+- need to discard bad paths early
+
+--------------------------------------------------------------------------------------------------------
+Priority Queue(Heaps)
+This is a special kind of queue where elements are removed in order of priority, not just in the order they were added.
+Under the hood, priority queues are implemented usually as binary heaps. There are two main types:
+- min heap
+- max heap
+In a priority queue, insertion takes O(log n) and removal also takes O(log n)
+Priority Queue might show up when:
+- repeatedly extract the smallest/largest item.
+- maintaining a top-k or bottom-k set of values
+- real-time ranking, greedy selection, etc.
+- need to sort on the fly, faster than O( n log n).
