@@ -1,0 +1,1 @@
+In java, the HashMap<K,V> is basically the hash map, with a few very specific java rules and optimizations.
