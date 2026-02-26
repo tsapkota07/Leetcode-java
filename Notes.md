@@ -12,15 +12,18 @@ Note: Before the start of your session, type source scripts/aliases.sh to
 ### Step 1 — Concept Review (15 min)
 >* Re-read notes
 >* Watch short explainations
+>* Basically understand the concept. 
+>* Do all this insides of Notes.md for each problem. 
 
 ### Step 2 — (Deep Solve)
+>* Inside of Solution: 
 >* Write down Input, Output, Preconditions, Postconditions. 
 >* Try 30–45 minutes without looking at anything. 
->* Think on paper. Don't hesitate to write down stuff
+>* Think on paper/the text editor. Don't hesitate to write down stuff
 >* if stuck, take hint only.
 
 ### Step 3 — Post-Mortem (Most Important)
-In your Notes.md write:
+In your Notes.md write after the previous explanations: 
 >* Pattern used
 >* Why brute force fails
 >* Time complexity
