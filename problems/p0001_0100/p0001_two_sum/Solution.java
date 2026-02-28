@@ -72,7 +72,7 @@ in nums along as a key and the current index as the value in our hashmap.
 
 */
 
-//pattern used: Hashmap
+//pattern used: Hashing
 //Time complexity:
 // O(1) best case as the first two numbers might add up to the target.
 // O(n^2) worst case as we might have to deal with extreme hash collisions.

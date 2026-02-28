@@ -41,20 +41,20 @@ In your Notes.md write after the previous explanations:
 ## Copy paste this: 
 ```angular2html
 pxxxxProblemName
+/*
+Pattern:
+Core Idea:
+Why brute force fails:
+Edge Cases:
 
-###  Pattern:
-### Core Idea:
-### Why brute force fails:
+Complexity:
+-Time:
+-Space:
 
-### Edge Cases:
+Mistakes:
 
-### Complexity:
-- Time: 
-- Space: 
-
-### Mistakes:
-
-### Signal (how to recognize this pattern next time):
+Signal (how to recognize this pattern next time):
+*/
 ```
 
 ***

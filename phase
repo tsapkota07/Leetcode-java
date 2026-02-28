@@ -8,8 +8,8 @@ Patterns:
 	•	Prefix sum
 
 Problems (in order)
-	1.	Two Sum
-	2.	Contains Duplicate
+	1.	Two Sum- done.
+	2.	Contains Duplicate- done.
 	3.	Valid Anagram
 	4.	Intersection of Two Arrays
 	5.	Top K Frequent Elements
@@ -18,10 +18,6 @@ Problems (in order)
 	8.	Subarray Sum Equals K
 	9.	Two Sum II (sorted array)
 	10.	3Sum
-
-👉 Stay here until mediums feel comfortable.
-
-⸻
 
 🔵 PHASE 2 — Two Pointers & Sliding Window
 
@@ -192,13 +188,11 @@ Advanced
 
 ⸻
 
-How To Use This List
-
 For each phase:
 	•	Solve 2–3 per day
 	•	Re-solve after 3 days
 	•	Re-solve after 1 week
-	•	Write pattern summary in Notes.md
+	•	Write pattern summary in Notes.md or the solution.
 
 Do NOT move forward until:
 	•	You can solve at least 70% of that phase without hints.
@@ -209,5 +203,3 @@ Expected Timeline (Realistic)
 	•	Phases 1–3 → 2 months
 	•	Phases 4–6 → 2–3 months
 	•	Phases 7–10 → 3+ months
-
-Total mastery path: 6–8 months.
