@@ -49,7 +49,7 @@ Complexity:
 -Time: O(n)
 -Space: O(n)
 
-Mistakes: I did i-- while cmparing against sorted values. Kind of stupid on my end.
+Mistakes: I did i-- while comparing against sorted values. Kind of stupid on my end.
 
 Signal (how to recognize this pattern next time): Whenever it has to do something about storing frequency of something,
     hashmaps seem to be useful .
