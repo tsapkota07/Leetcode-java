@@ -21,10 +21,11 @@ public class Solution
         {
             map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
         }
+        // so, numbers are stored as num -> frequency pair.
+        // We want to store the numbers in order of frequency and get the numbers with the top k frequency.
 
-        // get the top k values from map. How to actually get the top k values for each key?
-        // Store the keys in an array and then sort them?
-        int[] intArray = map.keySet().stream()
+        //
+        int[] intArray = map.entrySet().stream()
                 .mapToInt(Integer::intValue)
                 .toArray();
 
