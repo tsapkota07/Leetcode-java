@@ -21,7 +21,7 @@ public class Solution
         }
 
         // Create a HashSet
-        // Add all elements of nums into HashSet to remove duplicates.
+        // Add all elements of nums into HashSet to remove duplicates and fast existence lookup.
         Set<Integer> set = new HashSet<>();
         for (int num: nums) {
             set.add(num);
@@ -52,4 +52,42 @@ public class Solution
         return length;
     }
 }
+/*
+Pattern: HashSet, Membership lookup, start of sequence expansion
 
+Core Idea:
+Put all nums into a HashSet for expected O(1) lookup.
+Only start counting when the number has no predecessor.
+If we start counting, that means it is the start of a consecutive sequence.
+For a consecutive sequence keep track of current longest and overall longest sequence.
+Update it after every other consecutive sequence.
+
+Why brute force fails:
+A brute force would have to extend sequences starting from many numbers repeatedly. So, work will be repeated
+and will be O(n^2) time.
+Another method is to sort the numbers but that will take O(n log n) time which doesn't match the O(n) requirement.
+
+Edge Cases:
+- Empty array -> return 0
+- Single element -> return 1
+- Duplicates -> HashSet takes care of that
+- Negative numbers -> works the same
+- Multiple separate sequences -> returns the longest one.
+
+Complexity:
+-Time: O(n) expected
+-Space: O(n)
+
+Mistakes:
+- Tried sorting first, which made it O(n logn) .
+- Used predecessor logic incorrectly for counting instead of only checking the direct start of a sequence.
+- Forgot that we should only expand from the beginning of a sequence.
+- Tried to use HashMap previously which was unnecessary and inefficient.
+
+Signal (how to recognize this pattern next time):
+When the program involves:
+- unsorted numbers
+- consecutive values
+- fast existence checking
+- O(n) requirement.
+*/
