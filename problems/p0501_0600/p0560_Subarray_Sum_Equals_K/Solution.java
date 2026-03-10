@@ -1,5 +1,7 @@
 package p0501_0600.p0560_Subarray_Sum_Equals_K;
 
+import java.util.HashMap;
+
 /*
 Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
 A subarray is a contiguous non-empty sequence of elements within an array.
@@ -10,31 +12,77 @@ public class Solution
 {
     public int subarraySum(int[] nums, int k){
 
-        // Will learn and do it later.
-        int number = 0;
-        for (int index = 0; index < nums.length; index++){
-            if (nums[index] == k) {
-                number++;
-                continue;
+        int count = 0;  // count = total number of valid subarrays
+        int runningSum = 0; // runningSum = prefix sum upto current index from 0.
+        HashMap< Integer, Integer > map = new HashMap<>(); // map -> stores prefixSum -> frequency
+
+        // We use running sum and Hashmap
+        // The running sum is the sum of all number from index 0 to the current index.
+        // We want to know if we have an earlier sum such that running sum - earlier sum == k.
+        // Rearranging this, wanna know if earlier sum = running sum - k.
+        // So, the question becomes have we seen runningsum - k = prefix sum before ?
+        // the map stores prefix sum -> frequency of the prefix sum.
+        // it remembers all previous running sums, so we can quickly check whether a previous sum exists
+        //  that forms a subarray of sum k.
+
+        map.put(0, 1);
+        // we put 0 inside the map as the first number might == k and want to include that in the subarray as well.
+        for (int num : nums)
+        {
+            // get the running sum upto the current number
+            runningSum += num;
+
+            // if map contains some previous sum then there exists a subarray that will equal k as we are
+            // just searching if previousSum = runningSum -k exists or not. Meaning, if running sum and some previous
+            // sum equal to k, they form a subarray sum.
+            if (map.containsKey(runningSum - k))
+            {
+                // this used to be count ++ previously.
+                // The reason we use map.get(runningSum - k) is because we want previous multiple frequencies to be
+                //  implemented in the current count as well
+                // Eg" [0,0,0,0]. If wer only get count++, if we're on the third number, even though possible subarrays
+                //      so far should should be 6 instead of 3 which is what we get if we do count ++ .
+                count = count + map.get(runningSum - k);
             }
 
-            // Wrong Code.
-            if (nums[index+1] + nums[index] == k){
-                number ++;
-                break;
-            }
-            else if (nums[index +1] + nums[index] < k){
-                nums[index] = nums[index-1] + nums[index];
-            }
-            else{
-                break;
-            }
+
+            map.put(runningSum, map.getOrDefault(runningSum, 0) + 1);
         }
 
-        return number;
+        return count;
 
     }
 
 }
+
+/*
+Pattern: Running Sum, HashMap
+
+Core Idea:
+Keep a running prefix sum.
+if running sum - k has appeared before, then there exists a subarray ending with current index with sum k.
+Store prefix sums in a hashmap as prefixSum -> frequency.
+
+Why brute force fails:
+// brute force has to check all the arrays and thus achieves O(n^2) time.
+
+Edge Cases:
+// Subarray starts at index 0 -> handled by map.put (0,1)
+// negative numbers -> is handled by this.
+// repeated prefix sums -> multiple valid subarrays end at the same index. This is key.
+
+Complexity:
+-Time: O(n)
+-Space: O(n)
+
+Mistakes:
+- Trying two pointers/ sliding window even though negatives can exist.
+- Forgetting to initialize map with 0->1.
+- Storing prefix sums without counting valid subarrays first.
+
+Signal (how to recognize this pattern next time):
+- When the program asks for count of subarrays with a target sum, especially with negative integers, think
+Prefix Sum + Hashmap.
+*/
 
 
