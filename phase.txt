@@ -17,8 +17,14 @@ Problems (in order)
 	7.	Longest Consecutive Sequence- done.
 	8.	Subarray Sum Equals K- done.
 	9.	Two Sum II (sorted array)- done.
-	10.	3Sum
-
+	10.	3Sum- done.
+Re-solve these again to build pattern:
+- Two Sum -> HashMap pattern
+- Top K Frequent Elements -> Bucket + Frequency
+- Product Of Array Except Self -> Prefix/Suffix Logic
+- Longest Consecutive Sequence -> HashSet Pattern
+- Subarray Sum equals K -> Prefix Sum + HashMap
+- 3Sum -> Sorting + Two Pointers.
 🔵 PHASE 2 — Two Pointers & Sliding Window
 
 Patterns:

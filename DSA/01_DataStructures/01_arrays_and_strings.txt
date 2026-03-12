@@ -1,0 +1,40 @@
+Arrays
+Arrays are the default data structure used to store ordered data.
+
+Examples
+- list of numbers
+- characters
+- coordinates
+- objects
+
+Properties
+- Elements are stored in contiguous memory
+- Access by index is constant time.
+
+Time Complexity
+Access: O(1)
+Search: O(n)
+Insertion: O(n)
+Deletion: O(n)
+
+Reason:
+When inserting or deleting elements, the rest of the array may need to shift.
+
+Arrays are useful when:
+- traversing elements in order.
+- accessing specific indices.
+- Comparing elements from both ends
+- Using techniques like prefix sum or sliding window.
+
+Strings
+Strings are arrays of characters.
+
+Important property:
+In most languages, strings are treated as immutable.
+This means that modifying a string usually creates a new one instead of changing the original.
+
+Common Problem involving strings:
+- finding substrings
+- checking anagrams
+- sliding window problems
+- pattern matching.

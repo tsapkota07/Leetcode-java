@@ -1,0 +1,44 @@
+Algorithm Analysis
+
+Algorithm
+An algorithm is a step by step procedure that transforms input into output in a finite amount of time.
+
+When solving a problem, clearly identify:
+- Input
+- Output
+- Preconditions -> What is Assumed true before execution
+- Postcondition -> What Must be true after execution.
+
+Primitive Operations
+To analyze running time, assume each primitive operation takes constant time.
+Examples:
+- value assignment
+- method call
+- arithmetic operations
+- comparison operations
+- Indexing into an array
+- Following object references
+- Returning from a method
+
+Instead of counting each operation exactly, we focus on the dominant operations that grow with the input size.
+
+Big O Notation
+Big O describes how the running time grows with increase in input size.
+
+Definition (Informal)
+f(n) is O(g(n)) if f(n) grows no faster than g(n) for large n.
+
+In practice:
+- ignore constants
+- ignore lower order terms.
+
+Example:
+3n^3 + 4n^2 + 5n + 6 → O(n^3). Ignoring lower terms we get: 3n^3. Ignoring constant we get: n^3. So this is O(n^3)
+
+Growth Hierarchy (slow to fast growth)
+log n
+n
+n log n
+n^3
+n^3
+2^n
