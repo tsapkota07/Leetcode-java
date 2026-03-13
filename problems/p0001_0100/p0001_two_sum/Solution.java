@@ -19,40 +19,90 @@
 package p0001_0100.p0001_two_sum;
 
 import java.util.HashMap;
-
-class Solution {
-    public int[] twoSum (int[] nums, int target) {
-
-        /*
-        Before you understand hashmap, understand what a complement is.
-        if a + b are two numbers who equal the number target.
-        Then, b is the complement of a and a is the complement of b.
-        Also, we can have other complements such as c + d = target. To make it easy on us,
-        We say target's complement of a is b.Also, target's complement of b is a.
-        this means the same as a + b is target.
-         */
-
-        HashMap <Integer, Integer> complementMap = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            // Store the index of complement of the current number.
-            Integer indexOfComplement = complementMap.get(nums[i]);
-
-            // if the index is found, return the index of the current number + the index of it's complement.
-            if (indexOfComplement != null) {
-                int[] answer = {i, indexOfComplement};
-                return answer;
+// Reinforcement
+class Solution{
+    public int[] twoSum(int[] nums, int target)
+    {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        // iterate over nums
+            // see if nums[i] is in our map
+                // if so, return [map.getValue(nums[i]), nums[i]]
+            // store the nums[i] and it's index in our hashmap
+        for(int i = 0; i < nums.length; i++){
+            if (map.containsKey(target - nums[i])){
+                return new int[]{map.get(target - nums[i]), i};
             }
-
-            // if index is null, meaning the complement of the current number does not yet exist in the map, make sure
-            // to put the complement of this number into the mapping.
-            complementMap.put(target - nums[i], i);
-
+            map.put(nums[i], i);
         }
         return null;
     }
-
-
 }
+/*
+Pattern: HashMap
+
+Core Idea:
+For each nums[i], check if target - nums[i] is already in the map
+If it is in the map then, return the value for target - nums[i], which is the index of that number in nums, and
+    the current index.
+Always put the current value and index in map.
+
+Why brute force fails:
+You have to use two for loops if you use brute force.
+
+Edge Cases:
+When the given array is empty, but this problem says that array won't be empty so don't worry about alldat.
+When the array might have multiple solution, and the expected index might not match but this problem's test cases
+    make sure that you get a unique solution.
+
+Complexity:
+Time: O(n)
+Space: O(n)
+
+Mistakes:
+- Don't try to overcomplicate things.
+
+Signal (how to recognize this pattern next time):
+- You have to do constant lookups, use hashmaps.
+
+*/
+
+
+
+
+//
+//class Solution {
+//    public int[] twoSum (int[] nums, int target) {
+//
+//        /*
+//        Before you understand hashmap, understand what a complement is.
+//        if a + b are two numbers who equal the number target.
+//        Then, b is the complement of a and a is the complement of b.
+//        Also, we can have other complements such as c + d = target. To make it easy on us,
+//        We say target's complement of a is b.Also, target's complement of b is a.
+//        this means the same as a + b is target.
+//         */
+//
+//        HashMap <Integer, Integer> complementMap = new HashMap<>();
+//        for (int i = 0; i < nums.length; i++) {
+//            // Store the index of complement of the current number.
+//            Integer indexOfComplement = complementMap.get(nums[i]);
+//
+//            // if the index is found, return the index of the current number + the index of it's complement.
+//            if (indexOfComplement != null) {
+//                int[] answer = {i, indexOfComplement};
+//                return answer;
+//            }
+//
+//            // if index is null, meaning the complement of the current number does not yet exist in the map, make sure
+//            // to put the complement of this number into the mapping.
+//            complementMap.put(target - nums[i], i);
+//
+//        }
+//        return null;
+//    }
+//
+//
+//}
 /*Thinking process:
 HashMap  K -> V
 Key is (target - num} =
@@ -61,7 +111,7 @@ We insert 1 into the map along with its index.
 Does the next value, 2,  match the key we have in our hashmap No.{(1,0)} So, we just insert 6-2 = 4 as the Key and 1 as the value.
 4 -> 1
 Does the next value, 4, match the key we have in our hashmap? Yes {(1,0), (4,1)}
-So return the current index, 2 and the index/value we find for the number 4 in our hashmpa,1 . So, our answer is {2,1} .
+So return the current index, 2 and the index/value we find for the number 4 in our hashmap,1 . So, our answer is {2,1} .
 
 One more time, we try solving this using the Hashmap data structure. In each iteration we do the following:
 - get the index of the complement of the current number from our mapping. return null if the complement of current number

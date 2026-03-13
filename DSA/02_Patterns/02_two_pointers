@@ -1,0 +1,29 @@
+Two Pointers
+
+Idea
+Use two indices to traverse a structure.
+Instead of nested loops, pointers move through the array in a controlled way.
+
+Two main versions: Opposite directions && same direction.
+
+Opposite directions
+left -> start
+right -> end
+Used when array is sorted.
+Example:
+while left < right
+    sums = nums[left] + nums[right]
+    if sum < target
+        left ++
+    if sum > target
+        right--
+    else
+        found solution
+
+Same direction
+Two pointers move forward together.
+Often used in sliding window problems.
+
+Why it helps
+Reduces time complexity.
+Nested loop, O(n^2) to Two Pointer, O(n)

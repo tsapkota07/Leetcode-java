@@ -1,0 +1,45 @@
+Hashing
+
+Hashing is a technique that maps data into an index using a hash function.
+The goal is to enable fast lookup, insertion, and deletion.
+A hash function converts a key into a numeric value.
+
+Example
+hash(key) -> index in table
+
+Hash Map
+A Hashmap stores data as key-value pairs.
+
+Example
+employee -> ID
+key -> used to look up the value
+value -> stored data
+
+Common Operations:
+put (key, value) -> insert or update
+get (key) -> retrieve value
+containsKey(key) -> check if key exists
+remove (key) -> delete the key-value entry.
+
+Java HashMap Notes
+Keys rely on two methods
+- hashCode()
+- equals
+
+Rule:
+If a.equals(b) is true, then a.hashCode() must also be the same.
+If this rule is violated, the map may behave incorrectly.
+
+Collisions
+A collision occurs when two keys produce the same hash value
+Modern hash tables handle collisions internally.
+
+Tim Complexity (Average)
+Insert: O(1)
+Lookup: O(1)
+Delete: O(1)
+Worst case: O(n) for all three if many collisions occur.
+
+Important Constraint
+Keys should be immutable while stored in a map.
+Changing key data that affects hashCode can make the key unreachable.

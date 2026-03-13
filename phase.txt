@@ -1,3 +1,5 @@
+Overview of my plan:
+
 🔵 PHASE 1 — Arrays & Hashing (Foundation)
 
 Patterns:
@@ -25,6 +27,7 @@ Re-solve these again to build pattern:
 - Longest Consecutive Sequence -> HashSet Pattern
 - Subarray Sum equals K -> Prefix Sum + HashMap
 - 3Sum -> Sorting + Two Pointers.
+
 🔵 PHASE 2 — Two Pointers & Sliding Window
 
 Patterns:
