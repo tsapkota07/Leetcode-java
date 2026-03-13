@@ -1,4 +1,4 @@
-package p0101_0200.p0167_Two_Sum_II_Input_Array_Is_Sorted;
+package p0101_0200.p0167_two_sum_ii_input_array_is_sorted;
 
 import java.util.Arrays;
 

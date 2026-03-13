@@ -15,7 +15,9 @@ lc() {
   n=$(printf "%04d" "$1")
 
   local runner
-  runner=$(find problems -type f -name "Runner.java" -path "*/p${n}_*/*" -print -quit 2>/dev/null)
+  #runner=$(find problems -type f -name "Runner.java" -path "*/p${n}_*/*" -print -quit 2>/dev/null)
+  #runner=$(find problems -type f -name "Runner.java" -path "*/p${n}_*\/Runner.java" -print -quit 2>/dev/null)
+  runner=$(find problems -mindepth 2 -maxdepth 2 -type d -name "p${n}_*" -print -quit 2>/dev/null)/Runner.java
 
   if [ -z "$runner" ]; then
     echo "No Runner.java found for problem $1 (expected problems/**/p${n}_*/Runner.java)"
@@ -32,7 +34,9 @@ lc() {
   fi
 
   if [ "$2" = "list" ]; then
-    find problems -type f -name "Runner.java" -path "*/p${n}_*/*" 2>/dev/null | xargs -I{} dirname "{}"
+    #find problems -type f -name "Runner.java" -path "*/p${n}_*/*" 2>/dev/null | xargs -I{} dirname "{}"
+    #find problems -type f -name "Runner.java" -path "*/p${n}_*\/Runner.java" 2>/dev/null | xargs -I{} dirname "{}"
+    find problems -mindepth 2 -maxdepth 2 -type d -name "p${n}_*" 2>/dev/null
     return 0
   fi
 

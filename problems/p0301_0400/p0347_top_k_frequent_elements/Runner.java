@@ -1,6 +1,6 @@
 // asked gpt for runner
 
-package p0301_0400.p0347_Top_K_Frequent_Elements;
+package p0301_0400.p0347_top_k_frequent_elements;
 
 import java.util.Arrays;
 import java.util.HashSet;

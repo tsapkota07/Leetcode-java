@@ -1,4 +1,4 @@
-package p0001_0100.p0015_3Sum;
+package p0001_0100.p0015_3sum;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package p0501_0600.p0560_Subarray_Sum_Equals_K;
+package p0501_0600.p0560_subarray_sum_equals_k;
 
 import java.util.Arrays;
 

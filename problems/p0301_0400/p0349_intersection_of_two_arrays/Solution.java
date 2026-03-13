@@ -1,4 +1,4 @@
-package p0301_0400.p0349_Intersection_Of_Two_Arrays;
+package p0301_0400.p0349_intersection_of_two_arrays;
 
 
 import java.util.HashMap;

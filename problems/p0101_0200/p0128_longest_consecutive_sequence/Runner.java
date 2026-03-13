@@ -1,4 +1,4 @@
-package p0101_0200.p0128_Longest_Consecutive_Sequence;
+package p0101_0200.p0128_longest_consecutive_sequence;
 
 import java.util.Arrays;
 

@@ -1,10 +1,8 @@
-package p0001_0100.p0015_3Sum;
+package p0001_0100.p0015_3sum;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /*
 Given an integer array nums, return all the triplets nums[i], nums[j] and nums[k] such that

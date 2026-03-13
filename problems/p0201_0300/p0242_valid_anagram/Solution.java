@@ -1,4 +1,4 @@
-package p0201_0300.p0242_Valid_Anagram;
+package p0201_0300.p0242_valid_anagram;
 
 
 import java.util.HashMap;

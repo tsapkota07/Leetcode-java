@@ -1,6 +1,4 @@
-package p0101_0200.p0167_Two_Sum_II_Input_Array_Is_Sorted;
-
-import java.util.HashMap;
+package p0101_0200.p0167_two_sum_ii_input_array_is_sorted;
 
 /*
 Given a 1-indexed array of integers, numbers, that is already sorted in non-decreasing order, find two numbers such

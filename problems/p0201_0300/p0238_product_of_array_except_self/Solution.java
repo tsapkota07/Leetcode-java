@@ -1,4 +1,4 @@
-package p0201_0300.p0238_Product_Of_Array_Except_Self;
+package p0201_0300.p0238_product_of_array_except_self;
 
 
 public class Solution {
