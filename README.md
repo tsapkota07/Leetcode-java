@@ -5,6 +5,25 @@ This repository contains my practice for **Data Structures and Algorithms using 
 The goal is to solve LeetCode problems in a structured and repeatable environment instead of solving them only on the website.
 
 ---
+## Using This Repository
+
+If you want to use this setup for practicing LeetCode locally:
+
+```bash
+git clone https://github.com/tsapkota07/Leetcode-java.git
+cd Leetcode-java
+source scripts/aliases.sh
+```
+
+You can then run problems from the terminal:
+
+```bash
+lc 1
+lc 1 open
+lc 1 list
+```
+
+---
 
 ## Repository Structure
 
