@@ -22,8 +22,8 @@ Problems (in order)
 	10.	3Sum- done.
 Re-solve these again to build pattern:
 - Two Sum -> HashMap pattern - done.
-- Top K Frequent Elements -> Bucket + Frequency
-- Product Of Array Except Self -> Prefix/Suffix Logic
+- Top K Frequent Elements -> Bucket + Frequency - done
+- Product Of Array Except Self -> Prefix/Suffix Logic -
 - Longest Consecutive Sequence -> HashSet Pattern
 - Subarray Sum equals K -> Prefix Sum + HashMap
 - 3Sum -> Sorting + Two Pointers.
