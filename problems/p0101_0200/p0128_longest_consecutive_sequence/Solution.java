@@ -45,17 +45,13 @@ public class Solution {
 
             // if the current number is the start of a possible sequence, then we get to this part of the code.
             currentLongest = 1;
-            while (true) {
-                if (set.contains(number + 1) ){
-                    currentLongest ++;
-                    number ++;
-                    continue;
-                }
+            while (set.contains(number + 1)){
+                currentLongest ++;
+                number++;
+            }
 
-                maximumLength = Math.max (currentLongest, maximumLength);
+            maximumLength = Math.max (currentLongest, maximumLength);
 
-                break;
-            } // break out of the while loop
 
         }// end of for loop
 
