@@ -27,31 +27,26 @@ public class Solution {
             set.add(num);
         }
 
-        int currentLongest = 0;
         int maximumLength = 0;
-        int number = -1;
-
         // the idea, as far as i remember is to check if a number in the current index is the start of
         // a sequence or not.
         // If it is, then we see if the next element exists or not in our hashset
         // if it is not the start of a sequence, we skip it entirely and move to the next index.
-        for (int i = 0; i < nums.length; i++){
+        for (int number: set){
             // check if some number - 1 exists in the set or not.
             // if it exists, continue to next index.
-            number = nums[i];
-            if (set.contains(number - 1)) {
-                continue;
+            if (!set.contains(number - 1))
+            {
+                int currentLongest = 1;
+                // if the current number is the start of a possible sequence, then we get to this part of the code.
+                while (set.contains(number + 1))
+                {
+                    currentLongest++;
+                    number++;
+                }
+
+                maximumLength = Math.max(currentLongest, maximumLength);
             }
-
-            // if the current number is the start of a possible sequence, then we get to this part of the code.
-            currentLongest = 1;
-            while (set.contains(number + 1)){
-                currentLongest ++;
-                number++;
-            }
-
-            maximumLength = Math.max (currentLongest, maximumLength);
-
 
         }// end of for loop
 
@@ -73,8 +68,10 @@ Iterate through nums, number = nums[i]
 return maximum.
 
 Why brute force fails:
-Brute force would have had to first sort the array, then iterate through elements in that array.
-Didn't really implement brute force so don't know how we would go about it.
+A brute force approach could start from each number and repeatedly scan the array to check whether the
+next consecutive value exists, which would lead to repeated work and O(n²) time.
+Sorting would make it easier to find consecutive values, but sorting costs O(n log n),
+which does not satisfy the required O(n) time complexity.
 
 Edge Cases:
 When given array has no integers or only one integer.
