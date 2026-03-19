@@ -8,43 +8,73 @@ A subarray is a contiguous non-empty sequence of elements within an array.
 Contiguous meaning subarray that has consecutive elements.
 If [0,3,5,2,4] is an array, [0,3] or [3,5,2] is contiguous but [0,5] or [0,2,4] is not.
 */
+// second try: reinforcement.
 public class Solution{
     public int subarraySum (int[] nums, int k){
-        // note that subarray has to be contiguous.
-        // i remember something about putting target - current index in a prefix sum
-        // each key value pair would be value -> sum of values up to that index including that index
+        // i wasn't able to do it the first time, and I watched a video.
 
-        // I didn't get it within first 30 mins so i peeked at the previous solution.
-        int runningSum = 0;     // runningSum of the array upto current index.
-        int count = 0;
+        int sum = 0;     // runningSum of the array upto current index.
+        int total = 0;
 
-        HashMap<Integer,Integer> map= new HashMap<Integer,Integer>();
-        // stores key -> frequency pair where frequency means whether the running sum was seen before or not.
+        HashMap <Integer, Integer> map = new HashMap<Integer, Integer> ();
+        map.put (0,1); // this is in case the first number in nums equals k, and so sum - k = 0 should be in map.
 
-        map.put (0, 1);
-        // we put 0 as the key as value as runningSum-k = 0  might be in the map, meaning the first element in
-        // nums might be the value k.
+        for (int num : nums){
+            // calculate the sum.
+             sum = sum + num;
 
-        for (int num: nums) {
-            runningSum += num;
-            // we calculate the overall sum upto the current number in array
+             if (map.containsKey(sum-k)){
+                 // multiple previous prefix sums may equal (sum - k),
+                 // so we add the frequency instead of just 1.
+                 total = total + map.get(sum-k);
+             }
 
-            // if map contains runningSum- the k value, meaning some previous runningSum equals the
-            // difference between current runningsum and k,
-            if (map.containsKey(runningSum - k)){
-                count = count + map.get(runningSum - k);
-            }
-
-            map.put (runningSum, map.getOrDefault(runningSum, 0) + 1);
+             // increment the value of sum if already present.
+            // set value of sum to 1 if not present.
+             map.put (sum, map.getOrDefault(sum, 0) + 1);
         }
 
-        return count;
+        return total;
     }
 }
+/*
+Pattern:
+Prefix Sum and HashMap
+
+Core Idea:
+Store prefix sum, and it's frequency in a map
+Iterate through the nums array
+see if sum - k is already in the map
+    if it is, update count
+    add the frequency of sum-k to count. This is to account for zeros and negative numbers [IMPORTANT]
+Exit out of the nums array
+return count.
+
+Why brute force fails:
+- We must check each number against every other number, which is extremely inefficient.
+
+Edge Cases:
+- when there's all 0s and non-negative numbers (handled)
+- When there's only one number (also handled)
+
+Complexity:
+Time: O(n)
+Space: O(n)
+
+Mistakes:
+I tried to find sum in our map instead of sum-k.
+I tried incrementing the count by 1 instead of adding the frequency of sum-k's value to the current count.
+
+Signal (how to recognize this pattern next time):
+- if the problem asks for subarrays
+- num of ways/ total count.
+- array may include negative numbers or zeros.
+- a sum equal to some target that we know.
+
+ */
 
 
-
-// First Try- no brute force.
+// First Try: no brute force.
 //public class Solution
 //{
 //    public int subarraySum(int[] nums, int k){
