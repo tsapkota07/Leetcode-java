@@ -26,7 +26,7 @@ Re-solve these again to build pattern:
 - Product Of Array Except Self -> Prefix/Suffix Logic -done.
 - Longest Consecutive Sequence -> HashSet Pattern - done.
 - Subarray Sum equals K -> Prefix Sum + HashMap - done.
-- 3Sum -> Sorting + Two Pointers.
+- 3Sum -> Sorting + Two Pointers - done.
 
 🔵 PHASE 2 — Two Pointers & Sliding Window
 
