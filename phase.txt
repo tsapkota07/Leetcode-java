@@ -20,6 +20,7 @@ Problems (in order)
 	8.	Subarray Sum Equals K- done.
 	9.	Two Sum II (sorted array)- done.
 	10.	3Sum- done.
+
 Re-solve these again to build pattern:
 - Two Sum -> HashMap pattern - done.
 - Top K Frequent Elements -> Bucket + Frequency - done.
@@ -28,174 +29,320 @@ Re-solve these again to build pattern:
 - Subarray Sum equals K -> Prefix Sum + HashMap - done.
 - 3Sum -> Sorting + Two Pointers - done.
 
-🔵 PHASE 2 — Two Pointers & Sliding Window
+🔵 PHASE 2 — Two Pointers
 
 Patterns:
-	•	Expanding/contracting window
-	•	Fast/slow pointers
-	•	Window validity tracking
+    • Opposite-direction pointers
+    • Fast/slow pointers
+    • In-place array modification
+    • Sorted array pointer movement
 
 Problems
-	1.	Valid Palindrome
-	2.	Remove Duplicates from Sorted Array
-	3.	Container With Most Water
-	4.	Longest Substring Without Repeating Characters
-	5.	Longest Repeating Character Replacement
-	6.	Minimum Window Substring
-	7.	Find All Anagrams in a String
-	8.	Permutation in String
+    1. Valid Palindrome
+    2. Remove Duplicates from Sorted Array
+    3. Container With Most Water
+    4. Move Zeroes
+    5. Squares of a Sorted Array
 
-⸻
+Re-solve these again to build pattern:
 
-🔵 PHASE 3 — Stack & Monotonic Stack
+
+🔵 PHASE 3 — Sliding Window
 
 Patterns:
-	•	LIFO logic
-	•	Monotonic increasing/decreasing stack
-	•	Next greater element
+    • Expanding / contracting window
+    • Window validity tracking
+    • Frequency map inside window
 
 Problems
-	1.	Valid Parentheses
-	2.	Min Stack
-	3.	Daily Temperatures
-	4.	Next Greater Element I
-	5.	Largest Rectangle in Histogram
-	6.	Car Fleet
+    1. Best Time to Buy and Sell Stock
+    2. Longest Substring Without Repeating Characters
+    3. Longest Repeating Character Replacement
+    4. Permutation in String
+    5. Find All Anagrams in a String
+    6. Minimum Window Substring
+    7. Maximum Average Subarray I
 
-⸻
+Re-solve these again to build pattern:
 
-🔵 PHASE 4 — Linked List
+
+🔵 PHASE 4 — Stack
 
 Patterns:
-	•	Pointer manipulation
-	•	Fast/slow
-	•	Reversal
-	•	Merge technique
+    • LIFO
+    • Monotonic stack
+    • Next greater / smaller element
 
 Problems
-	1.	Reverse Linked List
-	2.	Merge Two Sorted Lists
-	3.	Linked List Cycle
-	4.	Remove Nth Node From End
-	5.	Reorder List
-	6.	Add Two Numbers
+    1. Valid Parentheses
+    2. Min Stack
+    3. Evaluate Reverse Polish Notation
+    4. Generate Parentheses
+    5. Daily Temperatures
+    6. Car Fleet
+    7. Largest Rectangle in Histogram
 
-⸻
 
 🔵 PHASE 5 — Binary Search
 
 Patterns:
-	•	Classic binary search
-	•	Lower/upper bound
-	•	Binary search on answer
+    • Classic binary search
+    • Lower / upper bound
+    • Binary search on answer
 
 Problems
-	1.	Binary Search
-	2.	Search Insert Position
-	3.	Search in Rotated Sorted Array
-	4.	Find Minimum in Rotated Sorted Array
-	5.	Koko Eating Bananas
-	6.	Median of Two Sorted Arrays (advanced)
+    1. Binary Search
+    2. Search Insert Position
+    3. Search a 2D Matrix
+    4. Koko Eating Bananas
+    5. Find Minimum in Rotated Sorted Array
+    6. Search in Rotated Sorted Array
+    7. Time Based Key-Value Store
+    8. Median of Two Sorted Arrays
 
-⸻
 
-🔵 PHASE 6 — Trees (Major Milestone)
+🔵 PHASE 6 — Linked List
 
 Patterns:
-	•	DFS (recursive + iterative)
-	•	BFS (level order)
-	•	Height/diameter
-	•	Balanced tree
-	•	LCA
+    • Pointer manipulation
+    • Fast / slow pointers
+    • Reversal
+    • Merge technique
 
 Problems
-	1.	Maximum Depth of Binary Tree
-	2.	Same Tree
-	3.	Invert Binary Tree
-	4.	Binary Tree Level Order Traversal
-	5.	Diameter of Binary Tree
-	6.	Balanced Binary Tree
-	7.	Lowest Common Ancestor
-	8.	Serialize and Deserialize Binary Tree
+    1. Reverse Linked List
+    2. Merge Two Sorted Lists
+    3. Reorder List
+    4. Remove Nth Node From End of List
+    5. Copy List with Random Pointer
+    6. Add Two Numbers
+    7. Linked List Cycle
+    8. Find the Duplicate Number
 
-Spend real time here.
 
-⸻
-
-🔵 PHASE 7 — Heap / Priority Queue
+🔵 PHASE 7 — Trees
 
 Patterns:
-	•	Min heap
-	•	Max heap
-	•	Top K
-	•	Merge structures
+    • DFS (recursive + iterative)
+    • BFS (level order)
+    • Divide and conquer
 
 Problems
-	1.	Kth Largest Element
-	2.	Top K Frequent Elements
-	3.	Find Median from Data Stream
-	4.	Merge K Sorted Lists
-	5.	Task Scheduler
+    1. Invert Binary Tree
+    2. Maximum Depth of Binary Tree
+    3. Diameter of Binary Tree
+    4. Balanced Binary Tree
+    5. Same Tree
+    6. Subtree of Another Tree
+    7. Lowest Common Ancestor of a Binary Search Tree
+    8. Binary Tree Level Order Traversal
+    9. Binary Tree Right Side View
+    10. Count Good Nodes in Binary Tree
+    11. Validate Binary Search Tree
+    12. Kth Smallest Element in a BST
+    13. Construct Binary Tree from Preorder and Inorder Traversal
+    14. Binary Tree Maximum Path Sum
+    15. Serialize and Deserialize Binary Tree
 
-⸻
 
-🔵 PHASE 8 — Graphs
+🔵 PHASE 8 — Heap / Priority Queue
 
 Patterns:
-	•	BFS
-	•	DFS
-	•	Cycle detection
-	•	Topological sort
-	•	Union Find
-	•	Dijkstra
+    • Min heap
+    • Max heap
+    • Top K
+    • Stream processing
 
 Problems
-	1.	Number of Islands
-	2.	Clone Graph
-	3.	Course Schedule
-	4.	Pacific Atlantic Water Flow
-	5.	Graph Valid Tree
-	6.	Redundant Connection
-	7.	Network Delay Time
+    1. Kth Largest Element in an Array
+    2. Last Stone Weight
+    3. K Closest Points to Origin
+    4. Kth Largest Element in a Stream
+    5. Task Scheduler
+    6. Design Twitter
+    7. Find Median from Data Stream
 
-⸻
 
 🔵 PHASE 9 — Backtracking
 
 Patterns:
-	•	Decision tree exploration
-	•	State undoing
+    • Decision tree
+    • Recursion + backtrack
 
 Problems
-	1.	Subsets
-	2.	Subsets II
-	3.	Permutations
-	4.	Combination Sum
-	5.	Word Search
-	6.	N-Queens
+    1. Subsets
+    2. Combination Sum
+    3. Permutations
+    4. Subsets II
+    5. Combination Sum II
+    6. Word Search
+    7. Palindrome Partitioning
+    8. Letter Combinations of a Phone Number
+    9. N-Queens
+    10. Permutations II
 
-⸻
 
-🔵 PHASE 10 — Dynamic Programming
+🔵 PHASE 10 — Tries
 
-Start Simple
+Patterns:
+    • Prefix tree
+    • Character traversal
 
-1D DP
-	1.	Climbing Stairs
-	2.	House Robber
-	3.	Maximum Subarray
-	4.	Coin Change
+Problems
+    1. Implement Trie (Prefix Tree)
+    2. Design Add and Search Words Data Structure
+    3. Word Search II
+    4. Longest Word in Dictionary (bonus easy)
 
-2D DP
-	5.	Unique Paths
-	6.	Longest Common Subsequence
-	7.	Edit Distance
 
-Advanced
-	8.	Longest Increasing Subsequence
-	9.	Partition Equal Subset Sum
+🔵 PHASE 11 — Graphs
 
-⸻
+Patterns:
+    • BFS
+    • DFS
+    • Connected components
+
+Problems
+    1. Number of Islands
+    2. Clone Graph
+    3. Max Area of Island
+    4. Pacific Atlantic Water Flow
+    5. Surrounded Regions
+    6. Rotting Oranges
+    7. Walls and Gates
+    8. Course Schedule
+    9. Course Schedule II
+    10. Graph Valid Tree
+    11. Number of Connected Components in an Undirected Graph
+    12. Redundant Connection
+    13. Word Ladder
+
+
+🔵 PHASE 12 — Advanced Graphs
+
+Patterns:
+    • Dijkstra
+    • Topological sort
+    • Union Find
+
+Problems
+    1. Reconstruct Itinerary
+    2. Min Cost to Connect All Points
+    3. Network Delay Time
+    4. Swim in Rising Water
+    5. Alien Dictionary
+    6. Cheapest Flights Within K Stops
+    7. Path With Minimum Effort (bonus easy-medium)
+
+
+🔵 PHASE 13 — 1-D Dynamic Programming
+
+Patterns:
+    • Linear DP
+    • State transition
+
+Problems
+    1. Climbing Stairs
+    2. Min Cost Climbing Stairs
+    3. House Robber
+    4. House Robber II
+    5. Longest Palindromic Substring
+    6. Palindromic Substrings
+    7. Decode Ways
+    8. Coin Change
+    9. Maximum Product Subarray
+    10. Word Break
+    11. Longest Increasing Subsequence
+    12. Partition Equal Subset Sum
+
+
+🔵 PHASE 14 — 2-D Dynamic Programming
+
+Patterns:
+    • Grid DP
+    • Subsequence DP
+
+Problems
+    1. Unique Paths
+    2. Longest Common Subsequence
+    3. Best Time to Buy and Sell Stock with Cooldown
+    4. Coin Change II
+    5. Target Sum
+    6. Interleaving String
+    7. Longest Increasing Path in a Matrix
+    8. Distinct Subsequences
+    9. Edit Distance
+    10. Burst Balloons
+    11. Regular Expression Matching
+
+
+🔵 PHASE 15 — Greedy
+
+Patterns:
+    • Local optimal choice
+    • Sorting + greedy
+
+Problems
+    1. Maximum Subarray
+    2. Jump Game
+    3. Jump Game II
+    4. Gas Station
+    5. Hand of Straights
+    6. Merge Triplets to Form Target Triplet
+    7. Partition Labels
+    8. Valid Parenthesis String
+    9. Candy (bonus easy-medium)
+
+
+🔵 PHASE 16 — Intervals
+
+Patterns:
+    • Sorting intervals
+    • Merge / overlap logic
+
+Problems
+    1. Insert Interval
+    2. Merge Intervals
+    3. Non-overlapping Intervals
+    4. Meeting Rooms
+    5. Meeting Rooms II
+    6. Minimum Interval to Include Each Query
+    7. Remove Covered Intervals (bonus easy)
+
+
+🔵 PHASE 17 — Math & Geometry
+
+Patterns:
+    • Matrix manipulation
+    • Simulation
+
+Problems
+    1. Rotate Image
+    2. Spiral Matrix
+    3. Set Matrix Zeroes
+    4. Happy Number
+    5. Plus One
+    6. Pow(x, n)
+    7. Multiply Strings
+    8. Detect Squares
+    9. Valid Sudoku (bonus easy)
+
+
+🔵 PHASE 18 — Bit Manipulation
+
+Patterns:
+    • XOR tricks
+    • Bit masking
+
+Problems
+    1. Single Number
+    2. Number of 1 Bits
+    3. Counting Bits
+    4. Reverse Bits
+    5. Missing Number
+    6. Sum of Two Integers
+    7. Reverse Integer
+    8. Power of Two (bonus easy)
 
 For each phase:
 	•	Solve 2–3 per day
