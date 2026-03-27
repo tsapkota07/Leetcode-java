@@ -42,7 +42,7 @@ Problems
     2. Remove Duplicates from Sorted Array- done.
     3. Container With Most Water- done.
     4. Move Zeroes- done.
-    5. Squares of a Sorted Array
+    5. Squares of a Sorted Array- done.
 
 Re-solve these again to build pattern:
 
