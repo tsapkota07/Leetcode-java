@@ -41,7 +41,7 @@ Problems
     1. Valid Palindrome- done.
     2. Remove Duplicates from Sorted Array- done.
     3. Container With Most Water- done.
-    4. Move Zeroes
+    4. Move Zeroes- done.
     5. Squares of a Sorted Array
 
 Re-solve these again to build pattern:
