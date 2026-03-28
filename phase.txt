@@ -44,7 +44,12 @@ Problems
     4. Move Zeroes- done.
     5. Squares of a Sorted Array- done.
 
-Re-solve these again to build pattern:
+Reinforcement problems (similar pattern, not repeats):
+    1. Valid Word Abbreviation
+    2. Remove Element
+    3. Sort Colors
+    4. Backspace String Compare
+    5. Is Subsequence
 
 
 🔵 PHASE 3 — Sliding Window
