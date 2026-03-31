@@ -45,7 +45,7 @@ Problems
     5. Squares of a Sorted Array- done.
 
 Reinforcement problems (similar pattern, not repeats):
-    1. Valid Word Abbreviation
+    1. Valid Word Abbreviation- done.
     2. Remove Element
     3. Sort Colors
     4. Backspace String Compare

@@ -32,29 +32,79 @@ public class Solution
         int abbrPointer = 0;
 
         while (wordPointer < word.length() && abbrPointer < abbr.length()){
+            char abbrChar = abbr.charAt(abbrPointer);
+            char wordChar = word.charAt(wordPointer);
             // Handle cases
             // These are going to be if-else
             // if both pointers are same letters.
+            if (abbrChar == wordChar){
+                abbrPointer ++;
+                wordPointer ++;
+            }
+
+            // else if abbrChar is a letter
+            else if(Character.isLetter(abbrChar) ){
+                System.out.println(abbr.charAt(abbrPointer) + " of abbreviation at index " + abbrPointer +
+                        " does not match " + word.charAt(wordPointer) + " of word at index " + wordPointer + ".");
+                return false;
+            }
 
 
-
-            // else if abbrPointer is a letter
-            //
-
-
-            // else if abbrPointer is a 0
+            // else if abbrChar is a 0
+            else if (abbrChar == '0'){
+                System.out.println("There is a 0 (zero) in the abbreviation at index: " + (abbrPointer + 1) );
+                return false;
+            }
 
 
             // else if abbrPointer is non-zero digit.
+            else {
+                int sublength = 0;
+                while (abbrPointer < abbr.length() && Character.isDigit(abbr.charAt(abbrPointer))){
+                    sublength = sublength * 10 + Character.getNumericValue(abbr.charAt(abbrPointer));
+                    abbrPointer ++;
+                }
+                wordPointer = wordPointer + sublength;
+            }
                 //  implement something call sublength. initialize it to 0.
                 // while (abbrPointer < abbr.length() and abbr[abbrPointer] isn't a alphabet,
                     // sublength = sublength * 10 + integer value of abbr[abbrPointer]
                 // increase i by sublength.
-
-
         }
 
 
         return (wordPointer == word.length() && abbrPointer == abbr.length());
     }
 }
+/*
+Pattern:
+Two Pointers
+
+Core Idea:
+Set abbrPointer and wordPointer at the first element of abbr and word to represent current element.
+Call these abbrChar and wordChar
+if abbrChar == wordChar, move both pointer by 1.
+if abbrChar is a letter and doesn't match wordChar, return false. invalid abbreviation.
+if abbrChar is a 0, return false. invalid abbreviation.
+if abbrChar is a valid int, see if the next few elements are integers
+    if they are, parse them. eg: '123' becomes 123 and move wordPointer by 123.
+    if the next element isn't an integer, move wordPointer by abbrChar's integer value.
+return true only if all the elements were able to be compared.
+
+Why brute force fails:
+Don't know how i would even handle this would brute force. Definitely would be more time.
+
+Edge Cases:
+if there are no elements in abbr.
+if word is fully abbreviated.
+
+Complexity:
+Time: O(word.length() + abbr.length())
+Space: O(1)
+
+Mistakes:
+I forgot to check for equal letters and 0s at first.
+
+Signal (how to recognize this pattern next time):
+If needed to compare elements of two arrays consecutively.
+ */
