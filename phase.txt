@@ -46,7 +46,7 @@ Problems
 
 Reinforcement problems (similar pattern, not repeats):
     1. Valid Word Abbreviation- done.
-    2. Remove Element
+    2. Remove Element- done.
     3. Sort Colors
     4. Backspace String Compare
     5. Is Subsequence
