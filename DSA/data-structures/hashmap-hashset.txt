@@ -1,0 +1,54 @@
+HashMap & HashSet
+
+HashMap
+- Key-value pairs
+- O(1) average lookup, insert, delete
+- Operations: put, get, containsKey, remove
+
+Important in Java:
+- Keys rely on hashCode() and equals()
+- If a.equals(b) is true, then a.hashCode() must be the same
+- Keys should be immutable after insertion
+
+Worst case O(n) if many collisions, but average is O(1).
+
+HashSet
+- Collection of unique values, no duplicates
+- O(1) average add, contains, remove
+
+Good for:
+- Check if something exists
+- Track uniqueness
+- Fast membership checks
+
+Java Implementation
+
+HashMap:
+- Declaration: HashMap<Integer, Integer> map = new HashMap<>();
+- Put: map.put(key, value) — insert or overwrite
+- Get: map.get(key) — returns null if key doesn't exist
+- Check: map.containsKey(key) — safer than checking if get() is null
+- Remove: map.remove(key)
+- Iterate: for (Integer key : map.keySet()) or for (Integer val : map.values())
+
+Useful method: map.getOrDefault(key, defaultValue)
+This is great for frequency counting:
+map.put(num, map.getOrDefault(num, 0) + 1);
+
+HashSet:
+- Declaration: HashSet<Integer> set = new HashSet<>();
+- Add: set.add(element)
+- Check: set.contains(element)
+- Remove: set.remove(element)
+- Iterate: for (Integer x : set)
+
+Both use equals() and hashCode() for custom objects.
+If you're storing custom classes, override both methods correctly.
+
+Common pattern: Frequency map
+Map<Integer, Integer> freq = new HashMap<>();
+for (int num : arr) {
+    freq.put(num, freq.getOrDefault(num, 0) + 1);
+}
+
+

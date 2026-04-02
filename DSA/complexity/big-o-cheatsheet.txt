@@ -1,0 +1,39 @@
+Big O Cheatsheet
+
+O(1) — Constant
+- Array access by index
+- HashMap get/put
+- No matter input size, same time
+
+O(log n) — Logarithmic
+- Binary search
+- Halving input each time
+
+O(n) — Linear
+- Single loop through array
+- Proportional to input size
+
+O(n log n) — Linearithmic
+- Merge sort, Quick sort
+- Efficient sorting
+
+O(n²) — Quadratic
+- Nested loops
+- Two pointers brute force
+- Slow for large inputs
+
+O(n³) — Cubic
+- Triple nested loops
+- Even slower
+
+O(2^n) — Exponential
+- Recursion without memoization
+- Very slow, only for small inputs
+
+O(n!) — Factorial
+- Generating all permutations
+- Only feasible for n < 10
+
+Growth Hierarchy (slowest to fastest):
+O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2^n) < O(n!)
+

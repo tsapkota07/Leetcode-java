@@ -21,6 +21,7 @@ target/
 # =========================
 # macOS
 .DS_Store
+.copilot
 
 # Linux
 *~

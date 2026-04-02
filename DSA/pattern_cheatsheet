@@ -1,6 +1,0 @@
-Need pair sum -> HashMap
-Sorted Pair Sum -> Two Pointers
-Triplet Sum -> Sort + Two Pointers
-Count subarrays with sum → Prefix sum + HashMap
-Top K frequent → Heap / Bucket
-Longest consecutive → HashSet

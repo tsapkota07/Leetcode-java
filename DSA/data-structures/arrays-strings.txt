@@ -1,0 +1,48 @@
+Arrays & Strings
+
+Arrays
+- Contiguous memory
+- Access by index: O(1)
+- Search: O(n)
+- Insert/Delete: O(n) — need to shift elements
+
+Good for:
+- Traversing in order
+- Accessing specific indices
+- Comparing from both ends
+- Prefix sum, sliding window
+
+Strings
+- Arrays of characters
+- Immutable in Java (change creates new string, doesn't modify original)
+- Common problems: substrings, anagrams, sliding window, pattern matching
+
+Java Implementation
+
+Arrays:
+- Declaration: int[] arr = new int[n];
+- Access: arr[i]
+- Length: arr.length (not a method, it's a property)
+- For iteration: for (int x : arr) or traditional for loop
+
+Dynamic sizing: Use ArrayList instead of array if you need to grow/shrink.
+ArrayList<Integer> list = new ArrayList<>();
+list.add(element);
+list.get(index);
+list.remove(index);
+
+Strings:
+- Declaration: String s = "hello";
+- Length: s.length() (it's a method for strings)
+- Access character: s.charAt(i)
+- Substring: s.substring(start, end) — end is exclusive
+- Common methods: s.toCharArray(), s.split(), s.contains(), s.indexOf()
+
+Remember: Strings are immutable. s.toLowerCase() doesn't change s, it returns a new string.
+If you need to modify, convert to char array, modify, then convert back to string.
+
+char[] chars = s.toCharArray();
+// modify chars
+String result = new String(chars);
+
+

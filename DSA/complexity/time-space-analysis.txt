@@ -1,0 +1,32 @@
+Time & Space Analysis
+
+Time Complexity
+- Count how many operations happen
+- Ignore constants: 3n = O(n)
+- Ignore lower-order terms: n² + n = O(n²)
+- Focus on dominant term
+
+How to count:
+- Single loop: O(n)
+- Nested loops: O(n²)
+- Loop then half each time: O(n log n)
+- Each element processed constant times: O(n)
+
+Space Complexity
+- How much extra memory do you use?
+- Input doesn't count (usually)
+- Count: arrays you create, maps, recursion stack
+
+Examples:
+- Array of size n: O(n) space
+- HashMap with n elements: O(n) space
+- Recursion depth n: O(n) for call stack
+- In-place swap: O(1) space
+
+Best/Average/Worst Case
+- Worst case: what if input is adversarial?
+- Average case: typical random input
+- Best case: lucky/easy input
+
+Usually report worst case unless specified.
+

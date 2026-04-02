@@ -1,0 +1,53 @@
+Stack & Queue
+
+Stack
+- LIFO: Last In First Out
+- Operations: push, pop, peek
+- Use when: order matters, nested structures, backtracking, undo/redo
+
+Queue
+- FIFO: First In First Out
+- Operations: enqueue, dequeue, peek
+- Use when: BFS, level-order traversal, job scheduling, task processing
+
+Java Implementation
+
+Stack:
+- Declaration: Stack<Integer> stack = new Stack<>();
+- Push: stack.push(element) — add to top
+- Pop: stack.pop() — remove and return top, throws exception if empty
+- Peek: stack.peek() — look at top without removing, throws if empty
+- Check empty: stack.isEmpty()
+
+Common pattern: Check if empty before popping
+if (!stack.isEmpty()) {
+    int top = stack.pop();
+}
+
+Or use try-catch if exception-handling is your style.
+
+Queue:
+- Declaration: Queue<Integer> queue = new LinkedList<>();
+- Enqueue: queue.add(element) or queue.offer(element)
+  - add() throws exception if queue is full (rare for LinkedList)
+  - offer() returns false if full (safer)
+- Dequeue: queue.remove() or queue.poll()
+  - remove() throws exception if queue is empty
+  - poll() returns null if empty (safer)
+- Peek: queue.peek() — look at front without removing, returns null if empty
+- Check empty: queue.isEmpty()
+
+Common pattern: BFS with queue
+Queue<Node> q = new LinkedList<>();
+q.add(start);
+while (!q.isEmpty()) {
+    Node current = q.poll();
+    // process current
+    if (current.left != null) q.add(current.left);
+    if (current.right != null) q.add(current.right);
+}
+
+Why LinkedList? Stack can use Vector (old), but Queue needs LinkedList for O(1) operations.
+Never use add()/remove() directly without checking isEmpty() first unless you handle exceptions.
+
+

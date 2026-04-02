@@ -1,0 +1,23 @@
+Amortized Analysis
+
+When an operation is sometimes expensive but cheap on average.
+
+Example: Dynamic Array
+- Most appends: O(1)
+- Some appends (when resize needed): O(n)
+- But averaged over many operations: O(1) per append
+
+Why? Resizing happens rarely. So even though it's expensive once, spread across all the appends, it's still O(1) average.
+
+Example: Hash Table
+- Most lookups: O(1)
+- If many collisions: O(n)
+- But on average (with good hash function): O(1)
+
+When to use amortized analysis:
+- Operations that vary in cost
+- Some operations are expensive, most are cheap
+- Need to know long-term average, not worst-case single operation
+
+Key insight: Don't just look at the worst operation. Look at the pattern over many operations.
+
