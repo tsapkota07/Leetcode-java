@@ -23,24 +23,48 @@ public class Solution
         {
             if (nums[i] == 0)
             {
-                tmp = nums[red];
-                nums[red] = nums[i];
+                tmp = nums[i];
                 nums[i] = nums[red];
+                nums[red] = tmp;
                 red++;
                 i++;
             }
             else if (nums[i] == 2)
             {
+                tmp = nums[i];
                 nums[i] = nums[blue];
-                nums[blue] = 2;
+                nums[blue] = tmp;
                 blue--;
             }
             else if (nums[i] == 1)
             {
-                tmp = nums[i + 1];
-                nums[i + 1] = nums[i];
-                nums[i] = tmp;
+                i++;
             }
-        } while (i < blue);
+        } while (i <= blue);
     }
 }
+/*
+Pattern:
+Two pointers
+
+Core Idea:
+one points at the place where the next red should go, initially at 0.
+and the other points at the place where the next blue should go, initially at the last, n-1.
+We then iterate until we
+
+Why brute force fails:
+Brute force would have to probably scan the array and keep track of the no of elements. Then populate a new array.
+
+Edge Cases:
+When there is only one element in the array, or it is already sorted.
+
+Complexity:
+Time: O(n)
+Space: O(1)
+
+Mistakes:
+I overcomplicated the part where nums[i] == 1, leading me to not being able to think properly for red and blue cases.
+
+Signal (how to recognize this pattern next time):
+- If needed to do in place sorting or something that involves swapping elements in an array.
+ */
