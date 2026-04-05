@@ -47,8 +47,8 @@ Problems
 Reinforcement problems (similar pattern, not repeats):
     1. Valid Word Abbreviation- done.
     2. Remove Element- done.
-    3. Sort Colors
-    4. Backspace String Compare
+    3. Sort Colors- done.
+    4. Backspace String Compare- done.
     5. Is Subsequence
 
 
