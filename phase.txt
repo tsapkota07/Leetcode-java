@@ -49,7 +49,7 @@ Reinforcement problems (similar pattern, not repeats):
     2. Remove Element- done.
     3. Sort Colors- done.
     4. Backspace String Compare- done.
-    5. Is Subsequence
+    5. Is Subsequence- done.
 
 
 🔵 PHASE 3 — Sliding Window
