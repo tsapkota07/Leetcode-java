@@ -68,18 +68,6 @@ The trick is the sorted property or in-place structure lets you make smart moves
 - Duplicates at boundaries → be careful with pointer movement
 - Off-by-one: does loop condition need `<` or `<=`?
 
-## Problems I've Solved
-- LC 0011 Container With Most Water — find max area between two lines
-- LC 0015 3Sum — find three numbers that sum to zero (sort first, then two pointers)
-- LC 0026 Remove Duplicates from Sorted Array — keep only unique, shift rest
-- LC 0027 Remove Element — remove all of a value, in-place
-- LC 0075 Sort Colors — in-place sort of three values (0, 1, 2)
-- LC 0125 Valid Palindrome — check palindrome ignoring spaces/punctuation
-- LC 0167 Two Sum II (sorted array) — find pair in sorted array
-- LC 0283 Move Zeroes — shift all zeros to end
-- LC 0408 Valid Word Abbreviation — compare string with abbreviation pattern
-- LC 0977 Squares of Sorted Array — square sorted array (use both ends since largest is at edge)
-
 ## Mistakes to Avoid
 - Forgetting to check pointer bounds before accessing array
 - Moving the wrong pointer (or not moving at all = infinite loop)

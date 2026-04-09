@@ -1,9 +1,10 @@
-# Pattern: [PATTERN_NAME]
+# Pattern: Sliding Window
 
 ## When to Use
-- [You need this when...]
-- [Problem asks for...]
-- [You'd normally use...]
+- You need to find something with a contiguous range (such as substring, subarray)
+- The problem involves consecutive elements satisfying some condition. 
+- Brute force would check all the possible ranges (O(n^2))
+- You want to track what's inside a moving window. 
 
 Think: "When would I actually reach for this pattern?"
 
