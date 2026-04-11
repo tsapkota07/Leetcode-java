@@ -1,6 +1,5 @@
 package p0001_0100.p0003_longest_substring_without_repeating_characters;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 /*
@@ -14,31 +13,30 @@ s consists of English letters, digits, symbols and spaces.
 public class Solution
 {
     public int lengthOfLongestSubstring (String s) {
-        HashMap<Character, Integer> map = new HashMap<>();
+        HashSet<Character> set = new HashSet<>();
         int leftSubstringPointer = 0;
         int rightSubstringPointer = 1;
-        int length = 1;
-        int runningLength = 1;
+        int max = 1;
 
-        if (s.length() <2) {
+        if (s.length() < 2) {
             return s.length();
         }
 
-        map.put(s.charAt(leftSubstringPointer),leftSubstringPointer);
+        set.add(s.charAt(leftSubstringPointer));
 
         while (rightSubstringPointer < s.length()){
-            while (map.containsKey(s.charAt(rightSubstringPointer)) ){
-                runningLength = rightSubstringPointer - map.get(s.charAt(rightSubstringPointer)) + 1;
-                map.remove(s.charAt(rightSubstringPointer));
-                leftSubstringPointer ++;
+            if (!set.contains(s.charAt(rightSubstringPointer))){
+                set.add(s.charAt(rightSubstringPointer));
                 rightSubstringPointer ++;
             }
+            else{
+                set.remove(s.charAt(leftSubstringPointer));
+                leftSubstringPointer++;
+            }
 
-            map.put(s.charAt(rightSubstringPointer), rightSubstringPointer);
-            length = Math.max(runningLength, length);
+            max = Math.max(max, rightSubstringPointer - leftSubstringPointer) ;
         }
-
-        return length;
+        return max;
 
     }
 }
