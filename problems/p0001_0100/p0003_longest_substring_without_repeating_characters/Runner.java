@@ -56,7 +56,7 @@ public class Runner {
         // Longer meaningful strings
         runTest(s, "abcdefghijk", 11, "Long unique sequence");
         runTest(s, "abcdefghijka", 11, "Long with repeat at end");
-        runTest(s, "au1a2u3", 4, "Pattern with digits and repeats");
+        runTest(s, "au1a2u3", 5, "Pattern with digits and repeats");
 
         // Edge cases from typical LeetCode test suite
         runTest(s, "aaab", 2, "Multiple same then different");
