@@ -86,7 +86,8 @@ When solving a problem:
 
 ## Notes
 
-- `Notes.md` contains general notes and patterns.
+- the DSA directory will have all the patterns I have solved so far. This, I will solve at the end of a phase, after I 
+  solve all the problems in that phase, as shown in phase.txt
 - `phase.txt` contains the roadmap for the topics and problems I plan to study.
 
 ---
