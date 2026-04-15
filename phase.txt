@@ -63,7 +63,7 @@ Problems
     1. Best Time to Buy and Sell Stock- done.
     2. Longest Substring Without Repeating Characters- done.
     3. Longest Repeating Character Replacement- done.
-    4. Permutation in String
+    4. Permutation in String- done.
     5. Find All Anagrams in a String
     6. Minimum Window Substring
     7. Maximum Average Subarray I
