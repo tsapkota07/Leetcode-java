@@ -53,7 +53,7 @@ public class Runner {
         runTest(s, "abc", "defabc", true, "Permutation after non-match");
 
         // Edge cases with exact frequency matching
-        runTest(s, "ab", "aab", false, "Extra character without match");
+        runTest(s, "ab", "aac", false, "Extra character without match");
         runTest(s, "abc", "ababc", true, "Contains permutation");
         runTest(s, "abc", "abbc", false, "Frequency mismatch");
 
